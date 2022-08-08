@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Vu-5I-dB3">
+    <device id="retina4_0" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Converter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Currency_Converter_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="9lc-5F-wcA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter from EURO to INR, USD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2o-y0-kpR">
+                                <rect key="frame" x="38.5" y="111" width="243" height="50"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DGA-RH-MMz"/>
+                                    <constraint firstAttribute="width" constant="243" id="bH7-qf-fLP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EURO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVj-Df-2de">
+                                <rect key="frame" x="121" y="191" width="78" height="50"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="d9H-0a-3g9"/>
+                                    <constraint firstAttribute="height" constant="50" id="tZd-iz-roE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmu-mi-saw">
+                                <rect key="frame" x="121" y="406" width="78" height="50"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JJW-o4-5Bs"/>
+                                    <constraint firstAttribute="width" constant="78" id="Xcf-l8-DLe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9hE-Nr-2hd">
+                                <rect key="frame" x="48" y="498" width="224" height="41"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="8OL-3r-XC8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gMF-zA-Xo9"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="INR"/>
+                                    <segment title="USD"/>
+                                </segments>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ufw-E1-kK3"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-jo-rJY">
+                                <rect key="frame" x="44" y="308" width="232" height="31"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <imageReference key="minimumValueImage" image="coloncurrencysign.circle" catalog="system" symbolScale="large"/>
+                                <imageReference key="maximumValueImage" image="coloncurrencysign.circle.fill" catalog="system" symbolScale="large"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eTs-Lc-WI8"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9hE-Nr-2hd" firstAttribute="centerX" secondItem="9lc-5F-wcA" secondAttribute="centerX" id="8m9-AH-6LS"/>
+                            <constraint firstItem="b2o-y0-kpR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Q0K-8Z-YE1"/>
+                            <constraint firstItem="b2o-y0-kpR" firstAttribute="centerX" secondItem="9lc-5F-wcA" secondAttribute="centerX" id="VdG-UC-sUx"/>
+                            <constraint firstItem="9lc-5F-wcA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XM9-TY-Orw"/>
+                            <constraint firstItem="QVj-Df-2de" firstAttribute="top" secondItem="b2o-y0-kpR" secondAttribute="bottom" constant="30" id="aqV-5H-JY7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9hE-Nr-2hd" secondAttribute="bottom" constant="30" id="bBe-Tx-iqw"/>
+                            <constraint firstItem="QVj-Df-2de" firstAttribute="centerX" secondItem="9lc-5F-wcA" secondAttribute="centerX" id="ceL-D5-OIR"/>
+                            <constraint firstItem="9hE-Nr-2hd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="doo-VG-Rk0"/>
+                            <constraint firstItem="JD4-jo-rJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="eC9-Xf-Qvd"/>
+                            <constraint firstAttribute="bottom" secondItem="9lc-5F-wcA" secondAttribute="bottom" id="ga6-Bx-POZ"/>
+                            <constraint firstItem="9lc-5F-wcA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h9W-Xu-Gxl"/>
+                            <constraint firstItem="xmu-mi-saw" firstAttribute="centerX" secondItem="9lc-5F-wcA" secondAttribute="centerX" id="ij0-Zj-P8A"/>
+                            <constraint firstItem="JD4-jo-rJY" firstAttribute="top" secondItem="QVj-Df-2de" secondAttribute="bottom" constant="67" id="lj0-wi-WNW"/>
+                            <constraint firstItem="9lc-5F-wcA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mLa-53-VYb"/>
+                            <constraint firstItem="xmu-mi-saw" firstAttribute="top" secondItem="JD4-jo-rJY" secondAttribute="bottom" constant="68" id="pJJ-YJ-UlF"/>
+                            <constraint firstItem="JD4-jo-rJY" firstAttribute="centerX" secondItem="9lc-5F-wcA" secondAttribute="centerX" id="v6x-Rf-ysn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currency Converter" id="iqu-wx-nKk">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle.fill" catalog="system" id="z1D-uu-mkn">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="xh0-Da-eDC" kind="popoverPresentation" popoverAnchorBarButtonItem="z1D-uu-mkn" id="jRc-lC-yvF">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CurrencySlider" destination="JD4-jo-rJY" id="HH9-5q-RTZ"/>
+                        <outlet property="EuroLabel" destination="QVj-Df-2de" id="MIJ-LS-qnz"/>
+                        <outlet property="convertedCurrencyLabel" destination="xmu-mi-saw" id="D4o-Av-EHI"/>
+                        <outlet property="currencySegmentControl" destination="9hE-Nr-2hd" id="pPn-sM-yeK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="97"/>
+        </scene>
+        <!--Appearence View Controller-->
+        <scene sceneID="uY4-MB-css">
+            <objects>
+                <viewController id="xh0-Da-eDC" customClass="AppearenceViewController" customModule="Currency_Converter_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JoT-CV-SeB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZn-t4-JnO">
+                                <rect key="frame" x="253" y="36" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="0OK-ac-rml"/>
+                                    <constraint firstAttribute="height" constant="50" id="bIw-4B-poe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="xh0-Da-eDC" eventType="touchUpInside" id="z5I-9Q-HPC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5B-c9-hhF">
+                                <rect key="frame" x="45" y="93" width="198" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="OFE-Or-gqL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="O0b-4K-diA">
+                                <rect key="frame" x="88" y="170" width="144" height="208"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INR  = 81.05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bF-cS-18j">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="71"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="8VF-I4-uuv"/>
+                                            <constraint firstAttribute="height" constant="71" id="x7c-WL-Oqd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD = 1.05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbk-E8-dqK">
+                                        <rect key="frame" x="0.0" y="142" width="144" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="V7Q-7J-qKc"/>
+                                            <constraint firstAttribute="height" constant="66" id="l8M-zJ-bSc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qqv-ki-Tbd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qqv-ki-Tbd" firstAttribute="trailing" secondItem="v5B-c9-hhF" secondAttribute="trailing" constant="77" id="HNf-Qr-42K"/>
+                            <constraint firstItem="pZn-t4-JnO" firstAttribute="top" secondItem="JoT-CV-SeB" secondAttribute="top" constant="36" id="Pul-oe-QwI"/>
+                            <constraint firstItem="O0b-4K-diA" firstAttribute="centerX" secondItem="JoT-CV-SeB" secondAttribute="centerX" id="Ul2-DE-VDG"/>
+                            <constraint firstItem="v5B-c9-hhF" firstAttribute="leading" secondItem="qqv-ki-Tbd" secondAttribute="leading" constant="45" id="bQR-6W-Uzd"/>
+                            <constraint firstItem="qqv-ki-Tbd" firstAttribute="trailing" secondItem="pZn-t4-JnO" secondAttribute="trailing" constant="17" id="dzj-Tq-AQx"/>
+                            <constraint firstItem="pZn-t4-JnO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qqv-ki-Tbd" secondAttribute="leading" symbolic="YES" id="fMU-p9-ZD7"/>
+                            <constraint firstItem="v5B-c9-hhF" firstAttribute="top" secondItem="qqv-ki-Tbd" secondAttribute="top" constant="93" id="n6w-oB-kmv"/>
+                            <constraint firstItem="O0b-4K-diA" firstAttribute="centerY" secondItem="JoT-CV-SeB" secondAttribute="centerY" id="vWo-MT-svZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEh-Mx-oSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1521.0280373831774" y="102.3758099352052"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b5E-73-DGY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Vu-5I-dB3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ibP-QA-YP2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Tv-RW-cIm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHE-l6-Tnj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="97.536945812807886"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coloncurrencysign.circle" catalog="system" width="128" height="121"/>
+        <image name="coloncurrencysign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="unnamed" width="602.5" height="1304"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
